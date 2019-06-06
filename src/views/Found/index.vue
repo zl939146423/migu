@@ -1,14 +1,26 @@
 <template>
     <div class="found">
-        found
+       
          <Tabbar></Tabbar>
+         <FoundBanner></FoundBanner>
+         <Nav></Nav>
+         <Shopping></Shopping>
+         <infobox></infobox>
+
     </div>
 </template>
 <script>
 import Tabbar from "@/components/Tabbar"
+import FoundBanner from "./found.vue"
+import Nav from "./nav"
+import Shopping from "./shopping"
+import infobox from "./infobox"
 export default {
-    components:{
-        Tabbar
+    name:"found",
+   
+   
+     components:{
+        Tabbar,FoundBanner,Nav,Shopping,infobox
     }
 }
 </script>
