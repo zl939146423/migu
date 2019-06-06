@@ -29,12 +29,12 @@ module.exports = {
     devServer: {
         open: true,
         host: 'localhost',
-        port: 8080,
+        port: 8081,
         https: false,
         hotOnly: false,
         proxy: { //http://47.96.0.211:9000          
             "/api":{
-                target:"http://47.96.0.211:9000",
+                target:"http://132.232.200.49:9000",
                 changeOrigin:true,
                 pathRewrite:{
                     "^/api":""

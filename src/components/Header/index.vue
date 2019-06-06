@@ -2,11 +2,11 @@
     <div class="app-header" v-if="isShow">
        <div class="left">
             <i :class="['fa', 'fa-'+icon]"></i>
-           <span>{{title}}</span>
+           <span class="title">{{title}}</span>
        </div>
        <div class="right">
-           <img src="../../assets/search_grey.png" alt="">
-           <span>搜索</span>
+           <i class="fa fa-clock-o"></i>
+            <i class="fa fa-search"></i>
        </div>
     </div>
 </template>
@@ -15,29 +15,31 @@
         width:3.75rem;
         height:50px;
         line-height: 50px;
-       
         color:#000;
+        background:#fff;
         display: flex;
         justify-content: space-between;
         padding:0 .2rem;
-        background:#F74444;
         opacity: 0.6;
-        /* position: fixed;
-        z-index:10; */
-        .right{
-            position: relative;
-            img{
-                width:30px;
-                height: 30px;
-                position: absolute;
-                left:-40px;
-                top:10px;
-                
-            }
-        }
+        position: fixed;
+        z-index:10;
          i{
-            font-size: 1.2em;
+            font-size: 1.6em;
             padding-right:0.1rem;
+        }
+        .title{
+            margin-left: 100px;
+            font-size:16px;
+        }
+        .right{
+            i{
+                width: 24px;
+                height: 24px;
+                font-size:24px;
+                margin-right:10px;
+                -webkit-text-stroke: 0.1px gray;
+                color: #000;
+            }
         }
     }
 </style>
@@ -46,9 +48,38 @@ import router from "@/router"
 export default{
 data(){
     return{
-        icon:'home',
         title:"咪咕首页",
+        icon:"home",
         isShow:true
+    }
+},
+ watch:{
+    $route(val){
+         switch (val.name) {
+                case "home":
+                    this.title = "咪咕首页"
+                    this.icon="home"
+                    this.isShow = true
+                    break;
+                case "ticket":
+                    this.title = "购票"
+                    this.icon="ticket"
+                    this.isShow = true
+                    break;
+                case "found":
+                    this.title = "发现"
+                    this.icon="ravelry"
+                    this.isShow = true
+                    break;
+                case "mine":
+                    this.title = "我的"
+                    this.icon="cog"
+                    this.isShow = true
+                    break;
+                default:
+                    this.isShow = false
+                    break;
+         }
     }
 },
 created(){  
@@ -56,22 +87,22 @@ created(){
          switch (to.name) {
                 case "home":
                     this.title = "咪咕首页"
-                    this.icon = "google-wallet"
+                    this.icon="home"
                     this.isShow = true
                     break;
                 case "ticket":
                     this.title = "购票"
-                    this.icon = "ticket"
+                    this.icon="ticket"
                     this.isShow = true
                     break;
                 case "found":
                     this.title = "发现"
-                    this.icon = "ravelry"
+                    this.icon="ravelry"
                     this.isShow = true
                     break;
                 case "mine":
                     this.title = "我的"
-                    this.icon = "cog"
+                    this.icon="cog"
                     this.isShow = true
                     break;
                 default:

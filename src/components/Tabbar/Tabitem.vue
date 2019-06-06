@@ -2,7 +2,7 @@
     <div class="tabitem" @click="change">
         <span v-if="!flag"><slot name="normalImg"></slot></span>
         <span v-else><slot name="activeImg"></slot></span>
-        <span :class="{active:flag}">{{txt}}</span>
+        <span  :class="{active:flag}">{{txt}}</span>
     </div>
 </template>
 <script>
@@ -33,8 +33,8 @@ export default {
     flex-direction: column;
     align-items: center;
     img{
-        width:40px;
-        height: 40px;
+        width:24px;
+        height: 24px;
     }
     .active{
         color:#F74444;
