@@ -1,5 +1,5 @@
 export default{
     name:"moviedetail",
-    path:"/moviedetail/:id",
+    path:"/moviedetail/:contId",
     component:()=>import('@/views/Home/movieDetail')
 }

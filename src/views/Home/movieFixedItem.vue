@@ -3,7 +3,7 @@
         <ul class="vertical-pic" >
                 <router-link  v-for="movie in movies" :key="movie.SRC_CONT_ID"
                     tag="li"
-                 :to="{name:'moviedetail',params:{id:movie.SRC_CONT_ID}}"> 
+                 :to="{name:'moviedetail',params:{contId:movie.SRC_CONT_ID}}"> 
                     <div class="content-pic">
                         <img class="lazy" :src="'http://movie.miguvideo.com/'+movie.imgSrcH" alt="">
                          <span class="bottom-tag ">{{movie.miguScore}}</span>
@@ -30,7 +30,7 @@ export default {
     },
     created(){//Vue.prototype
     console.log(this.limit)
-        this.$http.get("/api/migu/home/list",{
+        this.$http.get("/api/migu/index",{
             params:{
                 limit:this.limit,
                 page:this.txt
@@ -54,7 +54,7 @@ export default {
             width:32%;
             float: left;
             padding-bottom: 5px;
-            margin-right:5px;
+            margin-right:3px;
             .content-pic{
                 position: relative;
                 .bottom-tag{

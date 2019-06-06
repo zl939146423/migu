@@ -36,7 +36,7 @@
                  <MovieFixedBox txt="3" limit="3"></MovieFixedBox> 
              </div>
              <div class="movieietm" >
-                    <div class="module-name">好莱坞大片</div>
+                    <div class="module-name">内地最强</div>
                     <div class="content-pic">
                             <img class="lazy" src="http://movie.miguvideo.com/publish/i_www/image/70/664/538.jpg" alt="">
                     </div>

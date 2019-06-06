@@ -6,7 +6,7 @@
                  <router-link class="swiper-slide"
                   v-for="movie in movies" :key="movie.SRC_CONT_ID"
                     tag="div"
-                 to="#">
+                 :to="{name:'moviedetail',params:{contId:movie.SRC_CONT_ID}}">
                       <div class="content-pic">
                         <img class="lazy" :src="'http://movie.miguvideo.com/'+movie.imgSrcH" alt="">
                         </div>
@@ -39,7 +39,7 @@ export default {
     methods:{
     },
     created(){//Vue.prototype
-        this.$http.get("/api/migu/home/list",{
+        this.$http.get("/api/migu/index",{
             params:{
                 limit:this.limit,
                 page:this.txt
