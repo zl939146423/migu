@@ -1,6 +1,5 @@
 <template>
     <div class="home">
-<<<<<<< HEAD
         <div style="padding-top:60px;">
              <Banner ></Banner>
              <div class="recommend" >
@@ -54,10 +53,6 @@
                     <MovieSlidingBox txt="1" limit="10" nameclass="movie4"></MovieSlidingBox>
                 </div>
         </div>
-=======
-        <router-link tag="div" :to="{name:'actor',params:{id:id}}">演职员</router-link>
-        <router-view></router-view>
->>>>>>> 887bf868cf30d149d7649e8d87422961abd9614e
         <Tabbar></Tabbar>
     </div>
 </template>

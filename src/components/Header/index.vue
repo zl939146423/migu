@@ -30,6 +30,7 @@
         .title{
             margin-left: 100px;
             font-size:16px;
+            margin-top:-50px;
         }
         .right{
             i{

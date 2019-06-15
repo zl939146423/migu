@@ -14,14 +14,15 @@
             <p class="title">{{movie.name}}</p>
              <div style="font-size:16px;text-indent:30px; margin-bottom:10px">{{movie.describe}}</div> 
             <p style="font-size:20px;color:#666">演员：</p>
-            <div class="actor">
-                <div v-for="cast in movie.personnel"
+
+            <router-link tag="div" to="/actor"  class="actor">
+                <div v-for="cast in casts"
                 :key="cast.starid"
             > 
             <img height='100' width="100" :src="'http://movie.miguvideo.com/'+cast.imgSrc" alt="">
             <p class="name">{{cast.name}}</p>
             </div>
-            </div>
+            </router-link>
            
         </div>
     </div>
@@ -30,13 +31,17 @@
 export default {
     data(){
         return{
-            movie:null
+            movie:null,
+            casts:[]
+            
         }
     },
     methods:{
         getMovie(){
             this.$http.get("/api/migu/detail/" + this.$route.params.contId).then(res=>{
-                this.movie = res.data
+               console.log(res.data.personnel)
+               this.movie = res.data,
+                this.casts = res.data.personnel 
             })
         }
     },
@@ -58,7 +63,7 @@ p{
        overflow: hidden;
         div{
             float: left;
-             margin-left:5px;
+             margin-left:17px;
              margin-bottom:5px;   
         }
         .name{

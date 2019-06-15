@@ -1,15 +1,24 @@
 <template>
     <div class="nav">
-        <router-link 
-        tag="div"
-        to=""
-        class="container" 
-        v-for="nav in navs"
-        :key="nav.enter_id"
-        >
-         <i :class="['fa','fa-'+nav.icon]"><img :src="'http://movie.miguvideo.com/publish/i_www'+nav.imgSrc" alt=""></i>
-         <p>{{nav.name}}</p>
-        </router-link>
+        <div class="content">
+            <router-link 
+                tag="div"
+                to=""
+                class="container" 
+                v-for="nav in navs"
+                :key="nav.enter_id"
+                >
+                <i :class="['fa','fa-'+nav.icon]"><img :src="'http://movie.miguvideo.com/publish/i_www'+nav.imgSrc" alt=""></i>
+            </router-link>
+        </div>
+            <div class="pas">
+                <router-link tag="p" class="a" to="/found/infor"> 资讯</router-link>
+        <router-link tag="p" class="a"  to="/found/topic">话题</router-link>
+        <router-link tag="p" class="a"  to="/found/mall">商城</router-link>
+        <router-link tag="p" class="a"  to="/ticket">约票</router-link>
+         <router-link tag="p" class="a"  to="/found/activity">活动</router-link>
+            </div>
+         
     </div>
 </template>
 
@@ -51,14 +60,19 @@ export default {
 
 <style lang="scss" scoped>
 .nav{
-    display:flex;
     background: #fff;
-    flex:1;
-    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    .content{
+        width:3.75rem;
+        height: 40px;
+    }
     .container{
+        float: left;
+        width:20%;
+        height: 35px;
        i{
-
-           margin-left: 6px;
+           margin-left: 23px;
            margin-top:5px;
            margin-bottom: 4px;
            img{
@@ -66,9 +80,18 @@ export default {
               height: 30px;
            }
        }
-       p{
-           margin-left:5px;
-       }
+           
+       
+       
     }
 }
+.pas{
+    width: 100%;
+}
+.a{
+    width:20%;
+    height: 40px;
+    float: left;
+    text-align: center;
+  }
 </style>

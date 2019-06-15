@@ -2,9 +2,9 @@
     <div class="actor">
         <!-- 渐变部分 -->
       <div class="prc-wrap">
-          <i class="icon fa fa-arrow-left"></i>
+          <router-link to="/home"><i class="icon fa fa-arrow-left"></i></router-link>
           <div class='pull-left'>
-              <img src="http://movie.miguvideo.com/publish/meizi/star/images/0000/106/536/star_src_626802_450_600.jpg" alt="">
+              <img src="http://img2.imgtn.bdimg.com/it/u=1011671184,2207801498&fm=26&gp=0.jpg" alt="">
           </div>
           <div class="pull-right">
               <p class="font-18">赵小丁</p>
@@ -34,7 +34,7 @@
         </div>
         <div class="movier">
             <div>
-               <img src="http://movie.miguvideo.com/publish/meizi/star/images/0000/005/178/star_src_684090_450_600.jpg" alt="">
+               <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559926098001&di=9fc0b4145120a80fc44f1d4ad25bb50c&imgtype=0&src=http%3A%2F%2Fcdn2.ettoday.net%2Fimages%2F167%2Fd167822.jpg" alt="">
                <p>刘亦菲</p>
             </div>
             <div>
@@ -42,11 +42,11 @@
                 <p>杨洋</p>
             </div>
             <div>
-                <img src="http://movie.miguvideo.com/publish/meizi/star/images/0000/023/970/star_src_774029_450_600.jpg" alt="">
+                <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2610461611,926396256&fm=15&gp=0.jpg" alt="">
                 <p>严一宽</p>
             </div>
             <div>
-                <img src="http://movie.miguvideo.com/publish/meizi/star/images/0000/009/513/star_src_695331_450_600.jpg" alt="">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559926206845&di=d649dfd80906d3e8d6e649cb925d61bf&imgtype=0&src=http%3A%2F%2Fdingyue.nosdn.127.net%2Fy5MRv0ukrkIv3D0Z5KeINI7Dmf1NCzZ1AsfdeiycPN00n1538871710272.jpeg" alt="">
                 <p>罗晋</p>
             </div>
         </div>

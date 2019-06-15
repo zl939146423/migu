@@ -15,6 +15,9 @@ import AppHeader from "@/components/Header"
 export default {
     components:{
         AppHeader
+    },
+created(){
+      this.$store.dispatch("initCar")
     }
 }
 </script>

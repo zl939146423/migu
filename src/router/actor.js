@@ -1,5 +1,5 @@
 export default {
     name:"actor",
-    path:"/actor/:id",
+    path:"/actor",
     component:()=>import("@/views/Home/Actor")
 }
